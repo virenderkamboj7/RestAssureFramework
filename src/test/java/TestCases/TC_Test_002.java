@@ -9,6 +9,7 @@ import BasePackage.ApisUtil;
 import BasePackage.BaseClass;
 import junit.framework.Assert;
 import pojo.createuser.CreateUserRoot;
+import utilities.Report;
 
 public class TC_Test_002 extends BaseClass {
 
@@ -17,6 +18,7 @@ public class TC_Test_002 extends BaseClass {
 	
 	@Test
 	public void CreateUser() {
+		Report.endReport(new Throwable().getStackTrace()[0].getMethodName());
 	
 		//Excute post request with valid parameter
 		ApisUtil.CreateUser();

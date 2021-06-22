@@ -9,6 +9,7 @@ import BasePackage.Apis;
 import BasePackage.BaseClass;
 import junit.framework.Assert;
 import pojo.getSingleUser.getSingleUserRoot;
+import utilities.Report;
 
 public class TC_Test_001 extends BaseClass{
 	GsonBuilder builder = new GsonBuilder();
@@ -16,6 +17,7 @@ public class TC_Test_001 extends BaseClass{
 	
 	@Test
 	public void get() {
+		Report.endReport(new Throwable().getStackTrace()[0].getMethodName());
 		
 		// Executing get request
 		GetRequest(Apis.getUser);   

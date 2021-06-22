@@ -1,4 +1,4 @@
-package unilities;
+package utilities;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -8,15 +8,15 @@ import org.codehaus.groovy.syntax.ParserException;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-public class ReadJsonFile {
+public class JsonFileConfig {
 	
-	public void Read( String FilePath) {
+	public void Read() {
 		
 		JSONParser parser = new JSONParser();
 	
 	
 		try {
-			Object obj = parser.parse(new FileReader(FilePath));
+			Object obj = parser.parse(new FileReader("FilePath"));
 			JSONObject jsonObject = (JSONObject) obj;
 //			String name = (String) jsonObject.get("name");
 //			System.out.println(name);

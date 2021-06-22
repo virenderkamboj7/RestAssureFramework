@@ -1,25 +1,30 @@
-package unilities;
+package utilities;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class ReadTxtFile {
+public class TxtFileConfig {
 	
-	
-	public void Read() {
+	static String data;
+	public static String Read(String filepath) {
 		 try {
-		      File myObj = new File("filename.txt");
+		      File myObj = new File(filepath);
 		      Scanner myReader = new Scanner(myObj);
 		      while (myReader.hasNextLine()) {
-		        String data = myReader.nextLine();
-		        System.out.println(data);
+		        data = myReader.nextLine();
+//		        System.out.println(data);
+		        
+		        
 		      }
 		      myReader.close();
 		    } catch (FileNotFoundException e) {
 		      System.out.println("An error occurred.");
 		      e.printStackTrace();
 		    }
+		 return data;
+		
 	}
 
+	
 }
